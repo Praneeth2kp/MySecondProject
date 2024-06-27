@@ -14,6 +14,18 @@ import {useNavigation} from '@react-navigation/native';
 import Icons from 'react-native-vector-icons/Ionicons';
 import {NativeModules} from 'react-native';
 
+const Bluetooth = NativeModules['BluetoothModule'];
+Bluetooth.startDiscovery()
+  .then((isDiscovering: any) => {
+    if (isDiscovering) {
+      console.log('Bluetooth discovery started successfully');
+    } else {
+      console.log('Failed to start Bluetooth discovery');
+    }
+  })
+  .catch((error: any) => {
+    console.error('Error starting Bluetooth discovery', error);
+  });
 const HelloWorld = NativeModules['HelloWorldModule'];
 HelloWorld.getHelloFromNative((msg: any) => {
   console.log(msg);

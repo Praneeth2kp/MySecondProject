@@ -24,6 +24,7 @@ public class HelloWorldPackage implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new HelloWorldModule(reactContext));
         modules.add(new GetSoundModule(reactContext));
+        modules.add(new BluetoothModule(reactContext));
 
         return modules;
     }
