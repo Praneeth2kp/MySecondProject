@@ -8,7 +8,6 @@ import {
   Alert,
   TouchableOpacity,
   ScrollView,
-  
 } from 'react-native';
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
